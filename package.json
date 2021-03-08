@@ -5,11 +5,24 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "refresh-db": "npx knex migrate:rollback; npx knex migrate:latest; npx knex seed:run"
   },
   "dependencies": {
+    "axios": "^0.21.1",
+    "dexie": "^3.0.3",
+    "knex": "^0.95.1",
     "next": "10.0.7",
+    "pg": "^8.5.1",
+    "prop-types": "^15.7.2",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "sass": "^1.32.8"
+  },
+  "devDependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "babel-preset-amex": "^3.5.0",
+    "eslint": "^7.21.0",
+    "eslint-config-amex": "^13.1.0"
   }
 }
